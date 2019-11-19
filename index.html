@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div class="main--container">
+    <div class="card--container">
+      <div class="card _front">
+        <div class="front_top">
+          <div class="top_chip">
+            <img src="img/chip-card.png" alt="credit card chip" />
+          </div>
+          <div class="top_logo">
+            <img src="img/visa_logo.png" alt="credit card logo" />
+          </div>
+        </div>
+        <div class="front_middle">
+          <div class="cardNumber"></div>
+        </div>
+        <div class="front_bottom">
+          <div class="bottom_name"><span>Card Holder:</span><br /><span class="cardName"></span></div>
+          <div class="bottom_expiration">
+            <span>Expires:</span><br /><span class="cardDate"><span class="month">MM</span>/<span
+                class="year">YY</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="card _back">
+        <div class="strip"></div>
+        <div class="strip"><span class="cardCvv"></span></div>
+      </div>
+    </div>
+    <div class="form-container">
+      <form class="form" action="/">
+        <div class="form--input">
+          <label class="form--input_label" for="number">Card Number</label>
+          <input class="form--input_input" type="text" name="number" id="number" maxlength=16 />
+        </div>
+
+        <div class="form--input">
+          <label class="form--input_label" for="name">Cardholder name</label>
+          <input class="form--input_input" type="text" name="name" id="name" />
+        </div>
+
+        <div class="form--row">
+          <div class="form--col -date">
+            <label class="form--input_label" for="date">Expiration Date</label>
+            <select class="form--input_input _select" name="date--month" id="month">
+              <option value="Month" disabled selected>Month</option>
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select class="form--input_input _select" name="date--year" id="year" class="date--year">
+              <option value="Year" disabled selected>Year</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+            </select>
+          </div>
+
+          <div class="form--col -cvv">
+            <div class="form--input">
+              <label class="form--input_label" for="cvv">CVV</label>
+              <input class="form--input_input" type="text" name="cvv" id="cvv" maxlength=4 />
+            </div>
+          </div>
+        </div>
+
+        <button class="form--button" type="submit" disabled>Submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
