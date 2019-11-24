@@ -7,7 +7,6 @@ const cardYear = document.querySelector(".year");
 const numberMask = "################";
 
 const mapCardNumber = str => {
-  // console.log(str.split(""));
   const html = str.split("").map((char, index) => {
     if (index > 0 && index % 4 === 0) {
       return `<span> </span><div class='numberItem'>${char}</div>`;
@@ -20,7 +19,6 @@ const mapCardNumber = str => {
 
 const displayInput = e => {
   const value = form[e.target.name].value.trim();
-  console.log(e.target.name);
   if (e.target.name === "number" && value !== null) {
     if (value === "") {
       mapCardNumber(numberMask);
@@ -33,8 +31,6 @@ const displayInput = e => {
     cardCvv.textContent = value;
   } else if (e.target.name == "date--month") {
     cardMonth.textContent = cardMonth.textContent.replace(/[^]*/, value);
-    console.log(cardMonth.textContent);
-    console.log(value);
   } else if (e.target.name === "date--year") {
     cardYear.textContent = cardYear.textContent.replace(
       /[^]*/,
