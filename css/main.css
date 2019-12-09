@@ -3,10 +3,6 @@
           box-sizing: border-box;
 }
 
-*:focus {
-  outline: none;
-}
-
 html {
   width: 100%;
 }
@@ -273,6 +269,25 @@ body {
 .form--input {
   display: block;
   padding-bottom: 1rem;
+  position: relative;
+}
+
+.form--input .invalid {
+  border: 2px solid red;
+}
+
+.form--input .valid {
+  border: 2px solid green;
+}
+
+.form--input__invalid-info {
+  position: absolute;
+  top: -10%;
+  right: 0;
+  width: 6rem;
+  font-size: 0.8rem;
+  color: red;
+  display: none;
 }
 
 .form--input_label {
